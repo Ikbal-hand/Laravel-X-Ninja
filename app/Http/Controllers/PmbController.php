@@ -8,7 +8,7 @@ class PmbController extends Controller
 {
     //
     public function index(){
-        return view("PMBonlne.index");
+        return view("PMBonline.index");
     }
 
     public function store(Request $request){
