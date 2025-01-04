@@ -37,7 +37,9 @@
     <h1 class="font-extrabold text-[#03824f] text-[25px] items-center" >JURUSAN</h1>
 </div>
 <x-card :majors="$majors" />
-
+<div class="flex justify-center mt-12">
+    <h1 class="font-extrabold text-[#03824f] text-[25px] justify-center" >Berita Terbaru</h1>
+</div>
     <div class="mb-12">
         <div class="flex justify-center space-x-4" >
             <div class="mr-7 col-auto flex flex-col">
