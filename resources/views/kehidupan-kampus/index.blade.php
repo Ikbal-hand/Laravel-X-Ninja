@@ -1,13 +1,4 @@
 <x-layouts.app>
-    <style>
-        .border-box {
-            border: 2px dashed #333;
-            min-height: 100px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-    </style>
     <header class="bg-dark text-white py-3 border-box">
         <div class="container">
             Header Section
