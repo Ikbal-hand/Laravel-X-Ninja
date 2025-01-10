@@ -15,8 +15,8 @@ Route::resource("/profile",ProfileController::class)->only("index");
 Route::resource("/tautan",TautanController::class)->only("index");
 Route::resource("/kehidupan-kampus",KampusController::class)->only("index");
 Route::resource("/layanan",LayananController::class)->only("index");
-Route::resource("/login",LoginController::class)->only("index");
-Route::post("/login/asadmin",[AdminController::class,"login"])->name("login.proccess");
+// Route::resource("/login",LoginController::class)->only("index");
+// Route::post("/login/asadmin",[AdminController::class,"login"])->name("login.proccess");
 
 
 
