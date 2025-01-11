@@ -35,9 +35,22 @@
 
     <h1 class="font-extrabold text-[#03824f] text-[25px] items-center" >JURUSAN</h1>
 </div>
-<x-card :majors="$majors"/>
-<div class="flex justify-center mt-12">
-    <h1 class="font-extrabold text-[#03824f] text-[25px] justify-center mb-6" >Berita Terbaru</h1>
+<x-card :majors="$majors" />
+<div class="flex flex-col align-items-center mt-12">
+    <h1 class="breaking-news">
+        Berita dan kegiatan terbaru
+    </h1>
+
+    <div>
+
+    <h3 class="text-al">
+        Judul Disini bang
+    </h3>
+    <p>
+    </div>
+        Apa aja yang penting mah paragraf e artikel
+    </p>
+
 </div>
 
 <div class="container mx-auto py-8">
