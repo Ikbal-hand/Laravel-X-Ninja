@@ -7,16 +7,54 @@ use Illuminate\Http\Request;
 class ProfileController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Display the main profile page.
      */
     public function index()
     {
-        return view("profile.index");
+        return view('profile.index');
     }
 
     /**
-     * Show the form for creating a new resource.
+     * Display the "Tentang STTC" page.
      */
+    public function tentang()
+    {
+        return view('profile.tentang');
+    }
+
+    /**
+     * Display the "Statuta" page.
+     */
+    public function statuta()
+    {
+        return view('profile.statuta');
+    }
+
+    /**
+     * Display the "Organisasi" page.
+     */
+    public function organisasi()
+    {
+        return view('profile.organisasi');
+    }
+
+    /**
+     * Display the "SK Kode Etik" page.
+     */
+    public function skKodeEtik()
+    {
+        return view('profile.sk_kode_etik');
+    }
+
+    /**
+     * Display the "Akreditasi" page.
+     */
+    public function akreditasi()
+    {
+        return view('profile.akreditasi');
+    }
+
+    ///Other
     public function create()
     {
         //

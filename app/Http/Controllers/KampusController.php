@@ -7,16 +7,29 @@ use Illuminate\Http\Request;
 class KampusController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Display the main page for "Kehidupan Kampus".
      */
     public function index()
     {
-        return view("kehidupan-kampus.index", ['title' => 'Kehidupan Kampus']);
+        return view('kehidupan-kampus.index');
     }
 
     /**
-     * Show the form for creating a new resource.
+     * Display the "Ormawa" page.
      */
+    public function ormawa()
+    {
+        return view('kehidupan-kampus.ormawa');
+    }
+
+    /**
+     * Display the "Fasilitas" page.
+     */
+    public function fasilitas()
+    {
+        return view('kehidupan-kampus.fasilitas');
+    }
+    ///Other
     public function create()
     {
         //

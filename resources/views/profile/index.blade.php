@@ -1,5 +1,5 @@
 <x-layouts.app>
-    <h1>Profile Page</h1>
+    <h1 class="font-extrabold text-center text[25px]">Profile Page</h1>
     <div class="flex flex-row items-center">
         <img src="{{ asset('/img/informatika.jpg') }}" alt="" />
         <p>
