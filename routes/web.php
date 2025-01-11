@@ -60,7 +60,7 @@ Route::prefix('pmbonline')->group(function () {
 });
 
 // Route untuk Login
-Route::resource("/login", LoginController::class)->only("index");
+// Route::resource("/login", LoginController::class)->only("index");
 Route::post("/login/asadmin", [AdminController::class, "login"])->name("login.process");
 
 // Miscellaneous Route
