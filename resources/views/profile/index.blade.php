@@ -1,7 +1,9 @@
 <x-layouts.app>
     <h1 class="font-extrabold text-[25px] text-[#03824f] text-center">Profile Page</h1>
-    <div class="flex flex-row items-center">
+    <div class="flex items-center justify-center mt-5">
         <img src="{{ asset('/img/informatika.jpg') }}" alt="" />
+    </div>
+    <div class="flex flex-row items-center m-5 text-center">
         <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, a.
             Voluptas in blanditiis officia. Placeat aperiam nesciunt asperiores,
@@ -10,8 +12,8 @@
         </p>
     </div>
     <div>
-        <h1 class="font-extrabold text-[25px] text-[#03824f] text-center">Profil Kampus</h1>
-        <p class="m-10">
+        <h1 class="font-extrabold text-[25px] text-[#03824f] text-center m-8">Profil Kampus</h1>
+        <p class="m-10 text-center">
             Sekolah Tinggi Teknologi Cipasung didirikan untuk menjawab tantangan
             penyediaan tenaga ahli professional dalam bidang keteknikan yang
             dibutuhkan oleh masyarakat.
@@ -23,8 +25,7 @@
         </p>
 
         <h2 class="font-extrabold text-[25px] text-[#03824f] text-center">Misi</h2>
-
-        <ul class="m-10 text-justify list-disc">
+        <ul class="m-8 text-justify list-disc">
             <li>
                 Menyelenggarakan pendidikan yang berkualitas dan berorientasi pada kebutuhan masyarakat.
             </li>

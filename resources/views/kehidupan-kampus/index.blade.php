@@ -8,15 +8,19 @@
             align-items: center;
         }
     </style>
-    <header class="bg-dark text-white py-3 border-box">
-        <div class="container">
-            Header Section
+    <header class="bg-dark text-black py-3">
+        <div class="flex justify-center m-5">
+            <img src="{{ asset('/img/informatika.jpg') }}" alt="" />
         </div>
+        <h1 class="font-extrabold text-center m-5">Ini adalah kampus tercinta kami</h1>
     </header>
 
-    <section class="hero border-box">
+    <section>
         <div class="container">
-            Hero Section
+            <h1 class="text-center font-extrabold text-[25px] m-5 text-[#03824f]">Fasilitas</h1>
+        </div>
+        <div class="flex justify-center">
+            <h2>Deskripsi Fasilitas</h2>
         </div>
     </section>
 
