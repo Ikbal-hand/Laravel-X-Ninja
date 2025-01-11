@@ -1,6 +1,8 @@
 <x-layouts.app>
     <h1 class="font-extrabold text-[25px] text-[#03824f] text-center">Profile Page</h1>
     <div class="flex items-center justify-center mt-5">
+    <h1 class="font-extrabold text-center text[25px]">Profile Page</h1>
+    <div class="flex flex-row items-center">
         <img src="{{ asset('/img/informatika.jpg') }}" alt="" />
     </div>
     <div class="flex flex-row items-center m-5 text-center">

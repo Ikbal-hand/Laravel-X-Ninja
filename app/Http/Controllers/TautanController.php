@@ -11,7 +11,7 @@ class TautanController extends Controller
      */
     public function index()
     {
-        return view("tautan.index", ['title' => 'Tautan']);
+        return view("tautan.index");
     }
 
     /**
