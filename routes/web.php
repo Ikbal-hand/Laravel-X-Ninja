@@ -3,6 +3,7 @@
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\MahasiswaController;
 use App\Http\Controllers\KampusController;
 use App\Http\Controllers\LayananController;
 use App\Http\Controllers\PmbController;
@@ -15,6 +16,7 @@ Route::resource("/profile",ProfileController::class)->only("index");
 Route::resource("/tautan",TautanController::class)->only("index");
 Route::resource("/kehidupan-kampus",KampusController::class)->only("index");
 Route::resource("/layanan",LayananController::class)->only("index");
+Route::resource("/mahasiswa-help",MahasiswaController::class)->only("index");
 
 // Route untuk Home
 Route::resource("/", HomeController::class)->only("index");
@@ -58,6 +60,15 @@ Route::prefix('pmbonline')->group(function () {
     Route::get('/register', [PmbController::class, 'register'])->name('pmbonline.register');
     Route::get('/persyaratan', [PmbController::class, 'persyaratan'])->name('pmbonline.persyaratan');
 });
+
+// Route untuk Mahasiswa-help
+Route::prefix('/mahasiswa-help')->group(function () {
+    Route::resource("/mahasiswa-help", MahasiswaController::class)->only("index");
+    Route::get('/upload', [MahasiswaController::class, 'upload'])->name('mahasiswa-help.upload');
+    
+
+});
+
 
 // Route untuk Login
 // Route::resource("/login", LoginController::class)->only("index");

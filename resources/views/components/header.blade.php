@@ -67,7 +67,7 @@
                                 href="{{ route('layanan.upm') }}">UPM</a>
                         </div>
                     </div>
-
+    
                     <!-- PMB Online -->
                     <div
                         class=" group {{ request()->is('pmbonline.register') ? 'bg-green-700 text-white py-2 px-2' : 'bg-white py-2 px-2 hover:bg-yellow-200 relative' }} rounded-lg">
