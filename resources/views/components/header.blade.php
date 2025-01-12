@@ -10,10 +10,6 @@
                     <h1 class="font-extrabold text-[#03824f] text-[25px]">STT CIPASUNG</h1>
                 </div>
                 <div class="flex items-center space-x-4">
-                    {{--
-                    <div class="group {{ request()->is('login') ? 'bg-green-700 text-white py-2 px-2' : 'bg-white py-2 px-2 hover:bg-yellow-200 text-black relative' }}  rounded-lg"> --}}
-
-                    <!-- Beranda -->
                     <div
                         class="group {{ request()->is('/') ? 'bg-green-700 text-white py-2 px-2' : 'bg-white py-2 px-2 hover:bg-yellow-200 relative' }} rounded-lg">
                         <x-nav-link href="/" class="py-2 px-2">Beranda</x-nav-link>
@@ -38,16 +34,11 @@
                     </div>
 
                     <!-- Kehidupan Kampus -->
-                    <div
-                        class="relative group {{ request()->is('kehidupan-kampus') ? 'bg-green-700 text-white py-2 px-2' : 'bg-white py-2 px-2 hover:bg-yellow-200 relative' }} rounded-lg">
-                        <x-nav-link href="/kehidupan-kampus" class="py-2 px-2">Kehidupan
-                            Kampus</x-nav-link>
-                        <div
-                            class="invisible absolute top-10 right-0 flex flex-col bg-white divide-y divide-gray-100 rounded-lg shadow w-44 ml-7 group-hover:visible">
-                            <a class="border-gray-100 py-3 px-3 font-semibold text-gray-500 hover:text-black hover:bg-yellow-200"
-                                href="{{ route('kehidupan.fasilitas') }}">Fasilitas</a>
-                            <a class="border-gray-100 py-3 px-3 font-semibold text-gray-500 hover:text-black hover:bg-yellow-200"
-                                href="{{ route('kehidupan.ormawa') }}">Ormawa</a>
+                    <div class="relative group {{ request()->is('kehidupan-kampus') ? 'bg-green-700 text-white py-2 px-2' : 'bg-white py-2 px-2 hover:bg-yellow-200 relative' }} rounded-lg">
+                        <x-nav-link href="/kehidupan-kampus" class="text-black py-2 px-2">Kehidupan Kampus</x-nav-link>
+                        <div class="invisible absolute top-10 right-0 flex flex-col bg-white divide-y divide-gray-100 rounded-lg shadow w-44 ml-7 group-hover:visible">
+                            <a class="border-gray-100 py-3 px-3 font-semibold text-gray-500 hover:text-black hover:bg-yellow-200" href="{{ route('kehidupan.fasilitas') }}">Fasilitas</a>
+                            <a class="border-gray-100 py-3 px-3 font-semibold text-gray-500 hover:text-black hover:bg-yellow-200" href="{{ route('kehidupan.ormawa') }}">Organisasi Mahasiswa</a>
                         </div>
                     </div>
 
@@ -69,15 +60,11 @@
                     </div>
 
                     <!-- PMB Online -->
-                    <div
-                        class=" group {{ request()->is('pmbonline.register') ? 'bg-green-700 text-white py-2 px-2' : 'bg-white py-2 px-2 hover:bg-yellow-200 relative' }} rounded-lg">
-                        <x-nav-link href="/pmbonline" class="py-2 px-2">PMB Online</x-nav-link>
-                        <div
-                            class="invisible absolute top-10 right-0 flex flex-col bg-white divide-y divide-gray-100 rounded-lg shadow w-44 ml-7 group-hover:visible">
-                            <a class="border-gray-100 py-3 px-3 font-semibold text-gray-500 hover:text-black hover:bg-yellow-200"
-                                href="">Register</a>
-                            <a class="border-gray-100 py-3 px-3 font-semibold text-gray-500 hover:text-black hover:bg-yellow-200"
-                                href="">Persyaratan</a>
+                    <div class=" group {{ request()->is('pmbonline') ? 'bg-green-700 text-white py-2 px-2' : 'bg-white py-2 px-2 hover:bg-yellow-200 relative' }} rounded-lg">
+                        <x-nav-link href="/pmbonline" class="text-black py-2 px-2">PMB Online</x-nav-link>
+                        <div class="invisible absolute top-10 right-0 flex flex-col bg-white divide-y divide-gray-100 rounded-lg shadow w-44 ml-7 group-hover:visible">
+                            <a class="border-gray-100 py-3 px-3 font-semibold text-gray-500 hover:text-black hover:bg-yellow-200" href="{{ route('pmbonline.register') }}">Register</a>
+                            <a class="border-gray-100 py-3 px-3 font-semibold text-gray-500 hover:text-black hover:bg-yellow-200" href="{{ route('pmbonline.persyaratan') }}">Persyaratan</a>
                         </div>
                     </div>
                     <!-- Login -->
