@@ -7,7 +7,12 @@
                         <img src='{{ asset('img/STT-CIPASUNG-2-e1688823058980.png') }}' alt="Logo Here" width="50"
                             height="auto" />
                     </a>
-                    <h1 class="font-extrabold text-[#03824f] text-[25px]">STT CIPASUNG</h1>
+                    <div class="flex flex-col leading-tight mx-3">
+                        <a href="/">
+                            <h1 class="font-extrabold text-[#03824f] text-[25px] py-0">STT CIPASUNG</h1>
+                            <p class="text-[12px] mt-[0px]">High Education For all !</p>
+                        </a>
+                    </div>
                 </div>
                 <div class="flex items-center space-x-4">
                     {{--

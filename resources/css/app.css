@@ -51,6 +51,7 @@ body {
     background-color: var(--bs-btn-active-bg);
     border-color: var(--bs-btn-active-border-color);
     border-radius: 10px;
+    max-width: max-content;
     padding: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;

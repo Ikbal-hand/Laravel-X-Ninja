@@ -1,32 +1,39 @@
 <?php
 
 use App\Http\Controllers\AdminController;
-use App\Http\Controllers\Auth\AuthController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\KampusController;
 use App\Http\Controllers\LayananController;
 use App\Http\Controllers\PmbController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\SesionController;
 use App\Http\Controllers\TautanController;
+use App\Http\Middleware\EnsureRightRole;
+use App\Http\Middleware\StatusCkeck;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 Route::resource("/",controller: HomeController::class)->only("index");
 Route::resource("/pmbonline",PmbController::class)->only("index");
 Route::resource("/profile",ProfileController::class)->only("index");
 Route::resource("/tautan",TautanController::class)->only("index");
 Route::resource("/kehidupan-kampus",KampusController::class)->only("index");
-Route::resource("/layanan",LayananController::class)->only("index");
+Route::resource("/layanan",controller: LayananController::class)->only("index");
 
-// Route untuk Home
-Route::resource("/", HomeController::class)->only("index");
 
-Route::get('login', [AuthController::class, 'index'])->name('login');
-Route::post('post-login', [AuthController::class, 'postLogin'])->name('login.post');
-Route::get('registration', [AuthController::class, 'registration'])->name('register');
-Route::post('post-registration', [AuthController::class, 'postRegistration'])->name('register.post');
-Route::get('dashboard', [AuthController::class, 'dashboard']);
-Route::get('logout', [AuthController::class, 'logout'])->name('logout');
+Route::middleware([StatusCkeck::class])->group(function () {
+    // Route untuk login
+    Route::post('/login', [SesionController::class, 'login'])->name('login');
 
-// Route untuk Profile
+    // Route untuk dashboard administrator
+    Route::get('/dashboard-admin', [DashboardController::class, 'admin'])->name('dashboard-admin');
+
+    // Route untuk dashboard calon mahasiswa
+    Route::get('/dashboard-calon', [DashboardController::class, 'calon'])->name('dashboard-calon');
+});
+
+
+
 Route::prefix('profile')->group(function () {
     Route::resource("/", ProfileController::class)->only("index");
     Route::get('/tentang-sttc', [ProfileController::class, 'tentang'])->name('profile.tentang');
@@ -59,9 +66,6 @@ Route::prefix('pmbonline')->group(function () {
     Route::get('/persyaratan', [PmbController::class, 'persyaratan'])->name('pmbonline.persyaratan');
 });
 
-// Route untuk Login
-// Route::resource("/login", LoginController::class)->only("index");
-Route::post("/login/asadmin", [AdminController::class, "login"])->name("login.process");
 
 // Miscellaneous Route
 Route::get('/dropdown-hover', function () {

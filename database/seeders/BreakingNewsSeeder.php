@@ -9,7 +9,7 @@ class BreakingNewsSeeder extends Seeder
 {
     public function run()
     {
-        \App\Models\BreakingNew::factory()
+    BreakingNew::factory()
             ->count(100)
             ->create();
     }

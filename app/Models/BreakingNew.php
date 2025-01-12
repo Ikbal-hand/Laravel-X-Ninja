@@ -2,8 +2,10 @@
 
 namespace App\Models;
 
+use App\Models\User as ModelsUser;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use User;
 
 class BreakingNew extends Model
 {
@@ -18,6 +20,7 @@ class BreakingNew extends Model
         'content',
         'author',
         'category',
+        'image',
         'published_at',
     ];
 
@@ -40,13 +43,5 @@ class BreakingNew extends Model
     public function scopeByCategory($query, $category)
     {
         return $query->where('category', $category);
-    }
-
-    /**
-     * Relasi dengan model User (jika user adalah penulis).
-     */
-    public function author()
-    {
-        return $this->belongsTo(User::class, 'author', 'name');
     }
 }
