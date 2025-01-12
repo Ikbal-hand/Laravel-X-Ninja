@@ -40,17 +40,6 @@
     <h1 class="breaking-news">
         Berita dan kegiatan terbaru
     </h1>
-
-    <div>
-
-    <h3 class="text-al">
-        Judul Disini bang
-    </h3>
-    <p>
-    </div>
-        Apa aja yang penting mah paragraf e artikel
-    </p>
-
 </div>
 
 <div class="container mx-auto py-8">
