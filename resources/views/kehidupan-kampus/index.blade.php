@@ -8,7 +8,7 @@
             align-items: center;
         }
     </style>
-    <header>
+    <header class="bg-dark text-white py-3 border-box">
         <div class="flex justify-center m-5">
             <img src="{{ asset('/img/informatika.jpg') }}" alt="" />
         </div>
