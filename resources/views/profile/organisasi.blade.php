@@ -3,7 +3,7 @@
         <h1>Organisasi</h1>
     </div>
     <div class="container mx-auto ">
-        <img class="w-full h-48 object-cover my-3" src="https://media.istockphoto.com/id/1783743147/id/foto/pengusaha-muda-yang-bahagia-berbicara-di-mikrofon-saat-menghadiri-acara-pendidikan-di-aula.jpg?s=1024x1024&w=is&k=20&c=g4DvjUB-z9h3ZTj8jQP0o_3kRYdETK1RlbaAloh9Yuc=" alt="gambar seminar">
+        <img class="w-full h-48 object-cover my-3" src="{{ asset('/img/hierarki.jpeg') }}" alt="gambar seminar">
     </div>
 
     <div class="container border bg-green-200 border-gray-300 rounded-lg space-y-5  mx-auto text-left">
