@@ -1,4 +1,5 @@
 <x-layouts.app>
+
     <div class="flex items-center justify-center">
         <div class="container p-8 max-w-7x1 text-center">
             <h1 class="text-2xl font-bold">Statuta STT Cipasung</h1>

@@ -23,7 +23,7 @@
                     <ul class="text-sm  transition-all duration-500">
                         <li class="mb-6"><a href="javascript:;"  class="text-gray-600 hover:text-gray-900">FAQs</a></li>
                         <li class="mb-6"><a href="javascript:;"  class=" text-gray-600 hover:text-gray-900">Jurnal</a></li>
-                        <li class="mb-6"><a href="javascript:;"  class=" text-gray-600 hover:text-gray-900">Mahasiswa Help</a></li>
+                        <li class="mb-6"><a href="/mahasiswa-help"  class=" text-gray-600 hover:text-green-900">Mahasiswa Help</a></li>
                         <li class="mb-6"><a href="/login/ad"  class=" text-gray-600 hover:text-gray-900">Login as Administrator</a></li>
 
                     </ul>

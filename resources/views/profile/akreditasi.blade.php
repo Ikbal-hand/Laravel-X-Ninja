@@ -1,3 +1,4 @@
+
 <x-layouts.app> 
     <div class="flex items-center justify-center">
         <div class="container p-8 max-w-7xl text-center">

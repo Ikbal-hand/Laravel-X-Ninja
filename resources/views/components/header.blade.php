@@ -14,6 +14,14 @@
                         class="group {{ request()->is('/') ? 'bg-green-700 text-white py-2 px-2' : 'bg-white py-2 px-2 hover:bg-yellow-200 relative' }} rounded-lg">
                         <x-nav-link href="/" class="py-2 px-2">Beranda</x-nav-link>
                     </div>
+                    
+
+                    <!-- Testing -->
+                    <div
+                        class="group {{ request()->is('/') ? 'bg-green-700 text-white py-2 px-2' : 'bg-white py-2 px-2 hover:bg-yellow-200 relative' }} rounded-lg">
+                        <x-nav-link href="/login" class="py-2 px-2">Testing</x-nav-link>
+                    </div>
+
                     <!-- Profile -->
                     <div
                         class="relative group {{ request()->is('profile') ? 'bg-green-700 text-white py-2 px-2' : 'bg-white py-2 px-2 hover:bg-yellow-200 relative' }} rounded-lg">
@@ -58,7 +66,7 @@
                                 href="{{ route('layanan.upm') }}">UPM</a>
                         </div>
                     </div>
-
+    
                     <!-- PMB Online -->
                     <div class=" group {{ request()->is('pmbonline') ? 'bg-green-700 text-white py-2 px-2' : 'bg-white py-2 px-2 hover:bg-yellow-200 relative' }} rounded-lg">
                         <x-nav-link href="/pmbonline" class="text-black py-2 px-2">PMB Online</x-nav-link>

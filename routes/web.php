@@ -3,6 +3,7 @@
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\MahasiswaController;
 use App\Http\Controllers\KampusController;
 use App\Http\Controllers\LayananController;
 use App\Http\Controllers\PmbController;
@@ -11,10 +12,12 @@ use App\Http\Controllers\TautanController;
 use Illuminate\Support\Facades\Route;
 Route::resource("/",controller: HomeController::class)->only("index");
 Route::resource("/pmbonline",PmbController::class)->only("index");
+Route::resource("/auth",AuthController::class)->only("index");
 Route::resource("/profile",ProfileController::class)->only("index");
 Route::resource("/tautan",TautanController::class)->only("index");
 Route::resource("/kehidupan-kampus",KampusController::class)->only("index");
 Route::resource("/layanan",LayananController::class)->only("index");
+Route::resource("/mahasiswa-help",MahasiswaController::class)->only("index");
 
 // Route untuk Home
 Route::resource("/", HomeController::class)->only("index");
@@ -42,6 +45,12 @@ Route::prefix('kehidupan-kampus')->group(function () {
     Route::get('/ormawa', [KampusController::class, 'ormawa'])->name('kehidupan.ormawa');
     Route::get('/fasilitas', [KampusController::class, 'fasilitas'])->name('kehidupan.fasilitas');
 });
+// Route untuk Kehidupan Kampus
+Route::prefix('kehidupan-kampus')->group(function () {
+    Route::resource("/login", AuthController::class)->only("index");
+    Route::resource("/registration", AuthController::class)->only("index");
+   
+});
 
 // Route untuk Layanan
 Route::prefix('layanan')->group(function () {
@@ -58,6 +67,15 @@ Route::prefix('pmbonline')->group(function () {
     Route::get('/register', [PmbController::class, 'register'])->name('pmbonline.register');
     Route::get('/persyaratan', [PmbController::class, 'persyaratan'])->name('pmbonline.persyaratan');
 });
+
+// Route untuk Mahasiswa-help
+Route::prefix('/mahasiswa-help')->group(function () {
+    Route::resource("/mahasiswa-help", MahasiswaController::class)->only("index");
+    Route::get('/upload', [MahasiswaController::class, 'upload'])->name('mahasiswa-help.upload');
+    
+
+});
+
 
 // Route untuk Login
 // Route::resource("/login", LoginController::class)->only("index");

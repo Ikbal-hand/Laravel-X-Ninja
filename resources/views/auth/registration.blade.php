@@ -1,122 +1,70 @@
-<!DOCTYPE html>
-<html>
-
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Laravel 11 Custom User Register Page - itsolutionstuff.com</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-            crossorigin="anonymous">
-        <style type="text/css">
-            body {
-                background: #F8F9FA;
-            }
-        </style>
-    </head>
-
-    <body>
-
-        <section class="bg-light py-3 py-md-5">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-12 col-sm-10 col-md-8 col-lg-6 col-xl-5 col-xxl-4">
-                        <div class="card border border-light-subtle rounded-3 shadow-sm">
-                            <div class="card-body p-3 p-md-4 p-xl-5">
-                                <div class="text-center mb-3">
-                                    <a href="#!">
-                                        <img src="https://www.itsolutionstuff.com/assets/images/footer-logo-2.png"
-                                            alt="BootstrapBrain Logo" width="250">
-                                    </a>
-                                </div>
-                                <h2 class="fs-6 fw-normal text-center text-secondary mb-4">Sign up to your account</h2>
-                                <form method="POST" action="{{ route('register.post') }}">
-                                    @csrf
-
-                                    @session('error')
-                                        <div class="alert alert-danger" role="alert">
-                                            {{ $value }}
-                                        </div>
-                                    @endsession
-
-                                    <div class="row gy-2 overflow-hidden">
-                                        <div class="col-12">
-                                            <div class="form-floating mb-3">
-                                                <input type="text"
-                                                    class="form-control @error('name') is-invalid @enderror"
-                                                    name="name" id="name" placeholder="name@example.com"
-                                                    required>
-                                                <label for="name" class="form-label">{{ __('Name') }}</label>
-                                            </div>
-                                            @error('name')
-                                                <span class="text-danger" role="alert">
-                                                    <strong>{{ $message }}</strong>
-                                                </span>
-                                            @enderror
-                                        </div>
-                                        <div class="col-12">
-                                            <div class="form-floating mb-3">
-                                                <input type="email"
-                                                    class="form-control @error('email') is-invalid @enderror"
-                                                    name="email" id="email" placeholder="name@example.com"
-                                                    required>
-                                                <label for="email"
-                                                    class="form-label">{{ __('Email Address') }}</label>
-                                            </div>
-                                            @error('email')
-                                                <span class="text-danger" role="alert">
-                                                    <strong>{{ $message }}</strong>
-                                                </span>
-                                            @enderror
-                                        </div>
-                                        <div class="col-12">
-                                            <div class="form-floating mb-3">
-                                                <input type="password"
-                                                    class="form-control @error('password') is-invalid @enderror"
-                                                    name="password" id="password" value="" placeholder="Password"
-                                                    required>
-                                                <label for="password" class="form-label">{{ __('Password') }}</label>
-                                            </div>
-                                            @error('password')
-                                                <span class="text-danger" role="alert">
-                                                    <strong>{{ $message }}</strong>
-                                                </span>
-                                            @enderror
-                                        </div>
-                                        <div class="col-12">
-                                            <div class="form-floating mb-3">
-                                                <input type="password"
-                                                    class="form-control @error('password_confirmation') is-invalid @enderror"
-                                                    name="password_confirmation" id="password_confirmation"
-                                                    value="" placeholder="password_confirmation" required>
-                                                <label for="password_confirmation"
-                                                    class="form-label">{{ __('Confirm Password') }}</label>
-                                            </div>
-                                            @error('password_confirmation')
-                                                <span class="text-danger" role="alert">
-                                                    <strong>{{ $message }}</strong>
-                                                </span>
-                                            @enderror
-                                        </div>
-                                        <div class="col-12">
-                                            <div class="d-grid my-3">
-                                                <button class="btn btn-primary btn-lg"
-                                                    type="submit">{{ __('Register') }}</button>
-                                            </div>
-                                        </div>
-                                        <div class="col-12">
-                                            <p class="m-0 text-secondary text-center">Have an account? <a
-                                                    href="{{ route('login') }}"
-                                                    class="link-primary text-decoration-none">Sign in</a></p>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
+<x-layouts.app>
+<section class="bg-gray-50">
+    <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0 bg-svg">
+        <a href="#" class="flex items-center mb-6 text-2xl font-semibold text-gray-900">
+            Create Your Account ✨
+        </a>
+        <div class="w-full bg-white rounded-lg shadow dark:border sm:max-w-md xl:p-0">
+            <div class="p-6 space-y-4 sm:p-8">
+                <h1 class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl">
+                    Sign Up to Your Account
+                </h1>
+                @csrf
+                @if (session('error'))
+                    <div class="text-sm text-red-500">
+                        {{ session('error') }}
                     </div>
-                </div>
+                @endif
+
+                <form class="space-y-4 md:space-y-6" method="POST" action="{{ route('register.post') }}">
+                    @csrf
+                    <div>
+                        <label for="name" class="block mb-2 text-sm font-medium text-gray-900">Your Name</label>
+                        <input type="text" name="name" id="name"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-green-600 focus:border-green-600 block w-full p-2.5"
+                            placeholder="Gerry Gestario" required>
+                        @error('name')
+                            <p class="text-sm text-red-500 mt-1">{{ $message }}</p>
+                        @enderror
+                    </div>
+                    <div>
+                        <label for="email" class="block mb-2 text-sm font-medium text-gray-900">Your Email</label>
+                        <input type="email" name="email" id="email"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-green-600 focus:border-green-600 block w-full p-2.5"
+                            placeholder="mahasiswa@sttcipasung.ac.id" required>
+                        @error('email')
+                            <p class="text-sm text-red-500 mt-1">{{ $message }}</p>
+                        @enderror
+                    </div>
+                    <div>
+                        <label for="password" class="block mb-2 text-sm font-medium text-gray-900">Password</label>
+                        <input type="password" name="password" id="password"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-green-600 focus:border-green-600 block w-full p-2.5"
+                            placeholder="••••••••" required>
+                        @error('password')
+                            <p class="text-sm text-red-500 mt-1">{{ $message }}</p>
+                        @enderror
+                    </div>
+                    <div>
+                        <label for="password_confirmation" class="block mb-2 text-sm font-medium text-gray-900">Confirm Password</label>
+                        <input type="password" name="password_confirmation" id="password_confirmation"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-green-600 focus:border-green-600 block w-full p-2.5"
+                            placeholder="••••••••" required>
+                        @error('password_confirmation')
+                            <p class="text-sm text-red-500 mt-1">{{ $message }}</p>
+                        @enderror
+                    </div>
+                    <button type="submit"
+                        class="w-full text-white bg-green-600 hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">
+                        Sign Up
+                    </button>
+                    <p class="text-sm font-light text-gray-500">
+                        Already have an account? <a href="{{ route('login') }}" class="font-medium text-green-600 hover:underline">Sign in</a>
+                    </p>
+                </form>
             </div>
-        </section>
+        </div>
+    </div>
+</section>
 
-    </body>
-
-</html>
+</x-layouts.app> -->
