@@ -10,6 +10,8 @@ use App\Http\Controllers\PmbController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TautanController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Admin\SiteManagementController;
+use App\Http\Controllers\Admin\PenerimaanMahasiswaController;
 Route::resource("/",controller: HomeController::class)->only("index");
 Route::resource("/pmbonline",PmbController::class)->only("index");
 Route::resource("/auth",AuthController::class)->only("index");
@@ -23,7 +25,7 @@ Route::resource("/mahasiswa-help",MahasiswaController::class)->only("index");
 Route::resource("/", HomeController::class)->only("index");
 
 Route::get('login', [AuthController::class, 'index'])->name('login');
-Route::post('post-login', [AuthController::class, 'postLogin'])->name('login.post');
+Route::post('login', [AuthController::class, 'post'])->name('login.post');
 Route::get('registration', [AuthController::class, 'registration'])->name('register');
 Route::post('post-registration', [AuthController::class, 'postRegistration'])->name('register.post');
 Route::get('dashboard', [AuthController::class, 'dashboard']);
@@ -49,7 +51,7 @@ Route::prefix('kehidupan-kampus')->group(function () {
 Route::prefix('kehidupan-kampus')->group(function () {
     Route::resource("/login", AuthController::class)->only("index");
     Route::resource("/registration", AuthController::class)->only("index");
-   
+
 });
 
 // Route untuk Layanan
@@ -72,8 +74,20 @@ Route::prefix('pmbonline')->group(function () {
 Route::prefix('/mahasiswa-help')->group(function () {
     Route::resource("/mahasiswa-help", MahasiswaController::class)->only("index");
     Route::get('/upload', [MahasiswaController::class, 'upload'])->name('mahasiswa-help.upload');
-    
 
+
+});
+
+
+Route::prefix('admin')->middleware(['auth', 'admin'])->group(function() {
+    // Site Management Routes
+    Route::get('/fasilitas-kampus', [SiteManagementController::class, 'fasilitasKampus'])->name('admin.fasilitas');
+    Route::get('/news-report', [SiteManagementController::class, 'newsReport'])->name('admin.news');
+    Route::get('/organisasi-mahasiswa', [SiteManagementController::class, 'organisasiMahasiswa'])->name('admin.organisasi');
+
+    // Penerimaan Mahasiswa Baru Routes
+    Route::get('/daftar-calon-mahasiswa', [PenerimaanMahasiswaController::class, 'index'])->name('admin.calon-mahasiswa');
+    Route::get('/detail-calon-mahasiswa/{id}', [PenerimaanMahasiswaController::class, 'show'])->name('admin.calon-mahasiswa.detail');
 });
 
 

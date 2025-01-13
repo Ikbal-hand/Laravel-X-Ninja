@@ -49,6 +49,7 @@
                         <p class="col-md-8 fs-4">Welcome to dashboard.<br />Using a series of utilities, you can create
                             this jumbotron, just like the one in previous versions of Bootstrap. Check out the examples
                             below for how you can remix and restyle it to your liking.</p>
+                        <a href="/admin"> Admin sini </a>
                         <button class="btn btn-primary btn-lg" type="button">Dashboard</button>
                     </div>
                 </div>
