@@ -10,7 +10,6 @@
                     <h1 class=" text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl">
                         First Login to Your Account
                     </h1>
-                    @csrf
                     @if (session('status'))
                         <div class="text-sm text-green-500">
                             {{ session('status') }}
@@ -18,6 +17,7 @@
                     @endif
 
                     <form class="space-y-4 md:space-y-6" method="POST">
+                        @csrf
                         @method('POST')
                         <div>
                             <label for="email" class="block mb-2 text-sm font-medium text-gray-900">Your

@@ -38,7 +38,7 @@ class AuthController extends Controller
      *
      * @return response()
      */
-    public function postLogin(Request $request): RedirectResponse
+    public function post(Request $request): RedirectResponse
     {
         $request->validate([
             'email' => 'required',
@@ -46,7 +46,7 @@ class AuthController extends Controller
         ]);
 
         $credentials = $request->only('email', 'password');
-        if (Auth::attempt($credentials)) {
+        if (Auth::attempt($credentials)&& Auth::user()->role == 'admin') {
             return redirect()->intended('dashboard')
                         ->withSuccess('You have Successfully loggedin');
         }
@@ -83,7 +83,7 @@ class AuthController extends Controller
     public function dashboard()
     {
         if(Auth::check()){
-            return view('dashboard.index');
+            return view('admin');
         }
 
         return redirect("login")->withSuccess('Opps! You do not have access');
