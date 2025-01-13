@@ -63,7 +63,7 @@
                             <a class="border-gray-100 py-3 px-3 font-semibold text-gray-500 hover:text-black hover:bg-yellow-200"
                                 href="https://lppm.sttcipasung.ac.id/">LPPM</a>
                             <a class="border-gray-100 py-3 px-3 font-semibold text-gray-500 hover:text-black hover:bg-yellow-200"
-                                href="{{ route('layanan.upm') }}">UPM</a>
+                                href="{{ route('layanan.upm') }}">Mahasiswa Help</a>
                         </div>
                     </div>
     

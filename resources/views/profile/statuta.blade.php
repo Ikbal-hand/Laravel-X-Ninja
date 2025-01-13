@@ -2,11 +2,11 @@
 
     <div class="flex items-center justify-center">
         <div class="container p-8 max-w-7x1 text-center">
-            <h1 class="text-2xl font-bold">Statuta STT Cipasung</h1>
+            <h1 class="text-2xl font-bold text-[#03824f]">Statuta STT Cipasung</h1>
         </div>
     </div>
-    <div class="container border bg-amber-200 border-gray-300 rounded-lg space-y-5  mx-auto text-left">
-        <div class="p-6  space-y-8">
+    <div class="container border bg-green-200 border-gray-300 rounded-lg space-y-5  mx-auto text-left">
+        <div class="p-6  space-y-8 text-justify">
             <p>Dengan rahmat Allah, Tuhan Yang Maha Esa.</p>
             <p>Pesantren sebagai lembaga pendidikan yang memiliki akar kuat (indigenous) pada masyarakat muslim Indonesia, merupakan lembaga pendidikan Islam yang berjalan dan berkembang sesuai dengan tuntutan zaman serta memiliki model pendidikan multi aspek. Dimensi kegiatan sistem pendidikan yang dilaksanakan oleh pesantren bermuara pada sasaran utama perubahan wujud pada peningkatan persepsi terhadap agama, ilmu pengetahuan dan teknologi.</p>
             <p>Atas kesadaran para ulama dan tokoh-tokoh Pesantren Cipasung yang dilandaskan pada pemikiran di atas, maka pada tanggal 29 Mei 1997 didirikan Sekolah Tinggi Teknologi di lingkungan Pesantren Cipasung yang diberi nama Sekolah Tinggi Teknologi Cipasung (STT Cipasung).</p>

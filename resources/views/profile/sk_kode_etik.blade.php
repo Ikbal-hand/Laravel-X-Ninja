@@ -1,10 +1,10 @@
 <x-layouts.app>
     <div class="flex items-center justify-center">
         <div class="container p-8 max-w-7x1 text-center">
-            <h1 class="text-2xl font-bold">SK Kode Etik</h1>
+            <h1 class="text-2xl font-bold text-[#03824f]">SK Kode Etik</h1>
         </div>
     </div>
-    <div class="container border bg-amber-200 border-gray-300 rounded-lg space-y-20 mb-5 mx-auto text-left">
+    <div class="container border bg-green-200 border-gray-300 rounded-lg space-y-20 mb-5 mx-auto text-left">
         <div class="p-6 max-w-3xl space-y-8">
             <div>
                 <h4 class="text-2xl font-bold">Kode Etik Mahasiswa</h4>
