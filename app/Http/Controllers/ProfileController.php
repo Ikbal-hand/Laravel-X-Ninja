@@ -11,47 +11,7 @@ class ProfileController extends Controller
      */
     public function index()
     {
-        return view('profile.index');
-    }
-
-    /**
-     * Display the "Tentang STTC" page.
-     */
-    public function tentang()
-    {
-        return view('profile.tentang');
-    }
-
-    /**
-     * Display the "Statuta" page.
-     */
-    public function statuta()
-    {
-        return view('profile.statuta');
-    }
-
-    /**
-     * Display the "Organisasi" page.
-     */
-    public function organisasi()
-    {
-        return view('profile.organisasi');
-    }
-
-    /**
-     * Display the "SK Kode Etik" page.
-     */
-    public function skKodeEtik()
-    {
-        return view('profile.sk_kode_etik');
-    }
-
-    /**
-     * Display the "Akreditasi" page.
-     */
-    public function akreditasi()
-    {
-        return view('profile.akreditasi');
+        return view('profile.index',$title =['Profile']);
     }
 
     ///Other
