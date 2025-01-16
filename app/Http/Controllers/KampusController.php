@@ -17,18 +17,11 @@ class KampusController extends Controller
     /**
      * Display the "Ormawa" page.
      */
-    public function ormawa()
-    {
-        return view('kehidupan-kampus.ormawa');
-    }
 
     /**
      * Display the "Fasilitas" page.
      */
-    public function fasilitas()
-    {
-        return view('kehidupan-kampus.fasilitas');
-    }
+
     ///Other
     public function create()
     {
