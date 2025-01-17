@@ -3,7 +3,7 @@
         <h1>Organisasi</h1>
     </div>
     <div class="container mx-auto ">
-        <img class="w-full h-48 object-cover my-3" src="{{ asset('/img/hierarki.jpeg') }}" alt="gambar seminar">
+        <img class="w-full h-auto object-cover my-3" src="{{ asset('/img/hierarki.jpeg') }}" alt="gambar seminar">
     </div>
 
     <div class="container border bg-green-200 border-gray-300 rounded-lg space-y-5  mx-auto text-left">

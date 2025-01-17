@@ -16,10 +16,8 @@ use App\Http\Controllers\StatutaController;
 use App\Http\Controllers\TautanController;
 use App\Http\Controllers\TentangController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Admin\SiteManagementController;
-use App\Http\Controllers\Admin\PenerimaanMahasiswaController;
-use App\Http\Controllers\AuthController as ControllersAuthController;
 use App\Http\Controllers\OrmawaController;
+use App\Models\news_report;
 
 Route::resource("/",controller: HomeController::class)->only("index");
 Route::resource("/pmbonline",PmbController::class)->only("index");
@@ -32,6 +30,10 @@ Route::resource("/mahasiswa-help",MahasiswaController::class)->only("index");
 
 // Route untuk Home
 Route::resource("/", HomeController::class)->only("index");
+
+Route::get('/reports', function(){
+    return response()->json(news_report::all());
+});
 
 Route::get('login', [AuthController::class, 'index'])->name('login');
 Route::post('login', [AuthController::class, 'post'])->name('login.post');
