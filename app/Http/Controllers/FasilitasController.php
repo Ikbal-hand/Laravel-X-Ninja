@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class FasilitasController extends Controller
 {
-        public function indxe()
+        public function index()
     {
         return view('kehidupan-kampus.fasilitas');
     }

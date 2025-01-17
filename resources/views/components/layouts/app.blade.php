@@ -17,10 +17,10 @@
         <title>{{ $title ?? 'STT CIPASUNG' }}</title>
     </head>
 
-    <body class="mx-4">
+    <body class="">
         <x-header />
         {{-- All content  --}}
-        <main class="flex-grow">
+        <main class="flex-grow bg-svg   ">
 
             {{ $slot }}
         </main>

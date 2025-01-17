@@ -1,5 +1,5 @@
-<footer class="sticky flex-grow top-full w-full">
-    <div class="mx-auto max-w-7xl px-72 sm:px-6 lg:px-8 flex flex-end">
+<footer class="sticky flex-grow top-full w-full bg-slate-50">
+    <div class="mx-auto max-w-7xl px-72 sm:px-6 lg:px-8 flex flex-col">
         <div
             class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-3 md:gap-8 py-10 max-sm:max-w-sm max-sm:mx-auto gap-y-8">
             <div class="col-span-full mb-10 lg:col-span-2 lg:mb-0">
@@ -46,7 +46,6 @@
                 </ul>
             </div>
         </div>
-        <!--Grid-->
         <div class="py-7 border-t border-gray-200">
             <div class="flex items-center justify-center flex-col lg:justify-between lg:flex-row">
                 <span class="text-sm text-gray-500 ">©<a href="/">Ninja-Turtle-Project</a> 2024, All rights
@@ -95,5 +94,6 @@
                 </div>
             </div>
         </div>
+        <!--Grid-->
     </div>
 </footer>

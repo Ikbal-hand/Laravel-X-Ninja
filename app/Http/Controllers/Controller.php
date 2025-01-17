@@ -6,7 +6,6 @@ abstract class Controller
 {
     public function index()
     {
-        return view("PMBonlne.index");
 
     }
 
