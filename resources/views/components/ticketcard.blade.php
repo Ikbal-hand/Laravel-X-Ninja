@@ -4,7 +4,7 @@
                    class="flex items-center justify-between gap-4 text-xs font-bold uppercase text-gray-900">
                    <span>{{ $timeline }}</span>
                    <span class="w-px flex-1 bg-gray-900/10"></span>
-                   <span>{{ $month }}</span>
+                   <span>01</span>
                </time>
            </div>
            <div class="hidden sm:block sm:basis-56">

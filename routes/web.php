@@ -19,7 +19,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\OrmawaController;
 use App\Models\news_report;
 
-Route::resource("/",controller: HomeController::class)->only("index");
+Route::resource(name: "/",controller: HomeController::class)->only("index");
 Route::resource("/pmbonline",PmbController::class)->only("index");
 Route::resource("/auth",AuthController::class)->only("index");
 Route::resource("/profile",ProfileController::class)->only("index");
@@ -67,7 +67,6 @@ Route::prefix('layanan')->group(function () {
 
 // Route untuk PMB Online
 Route::prefix('pmbonline')->group(function () {
-    Route::resource("/", PmbController::class)->only("index");
     Route::get('/register', [AuthController::class, 'registration'])->name('pmbonline.register');
     Route::get('/persyaratan', [PmbController::class, 'persyaratan'])->name('pmbonline.persyaratan');
 });

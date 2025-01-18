@@ -20,7 +20,7 @@
     <body class="">
         <x-header />
         {{-- All content  --}}
-        <main class="flex-grow bg-svg   ">
+        <main class="bg-svg ">
 
             {{ $slot }}
         </main>
