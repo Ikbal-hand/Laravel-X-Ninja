@@ -111,7 +111,57 @@
     </div>
     <div class="flex justify-center py-4">
         <a href="" class="btn btn-sttc items-center"> Lihat Semua Berita dan kegiatan terbaru</a>
+        <div class="flex flex-row-2 justify-center space-y-3"></div>
     </div>
+    
+    <div class="bg-svg mb-6 text-center bg-green-700 py-4 flex items-center justify-center">
+    <h1 class="font-extrabold text-white text-[30px]">OUR PARTNER</h1>
+</div>
+
+<div class="bg-white p-5 flex items-center">
+    <div class="w-1/5 flex justify-center">
+        <img class="rounded-full w-32 h-32" src="https://png.pngtree.com/png-clipart/20230207/ourmid/pngtree-megawati-soekarno-daughter-of-the-president-of-the-republic-of-indonesia-png-image_6590527.png" alt="Alumni Image">
+    </div>
+
+    <div class="w-4/5">
+        <h2 class="text-2xl font-bold text-gray-800">Mie Jha Wathi</h2>
+        <h5 class="text-gray-600">Teknik Industri, Angkatan 2010</h5>
+        <p class="text-gray-600 mt-4">
+        Sekolah Tinggi Teknologi Cipasung adalah tempat yang mengubah cara pandang saya tentang teknologi dan masa depan. Dengan dosen-dosen yang berdedikasi, lingkungan belajar yang mendukung, dan teman-teman yang luar biasa, saya merasa benar-benar siap menghadapi tantangan dunia kerja.
+        </p>
+    </div>
+</div>
+
+<div class="bg-white p-5 flex items-center">
+    <div class="w-1/5 flex justify-center">
+        <img class="rounded-full w-32 h-32" src="data:image/jpeg;base64,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" alt="Alumni Image">
+    </div>
+
+    <div class="w-4/5">
+        <h2 class="text-2xl font-bold text-gray-800">Ahmad Ridwan Syahputra</h2>
+        <h5 class="text-gray-600">Teknik Informatika, Angkatan 2020</h5>
+        <p class="text-gray-600 mt-4">
+        Belajar di Sekolah Tinggi Teknologi Cipasung memberikan saya bekal yang lebih dari sekadar teori. Kampus ini mengajarkan pentingnya inovasi, kerja keras, dan kolaborasi. Saya bangga menjadi bagian dari keluarga besar Cipasung.
+        </p>
+    </div>
+</div>
+
+<div class="bg-white p-5 flex items-center">
+    <div class="w-1/5 flex justify-center">
+        <img class="rounded-full w-32 h-32" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQqRUf_cuSmqtZ0_g53INgfRYQTGduOQePwA&s" alt="Alumni Image">
+    </div>
+
+    <div class="w-4/5">
+        <h2 class="text-2xl font-bold text-gray-800">Rizky Ramadhan Hakim</h2>
+        <h5 class="text-gray-600">Teknik Informatika, Angkatan 2020</h5>
+        <p class="text-gray-600 mt-4">
+        Sekolah Tinggi Teknologi Cipasung bukan hanya tempat belajar, tetapi juga tempat saya menemukan potensi diri. Ilmu yang saya dapatkan di sini terus menjadi bekal untuk berkontribusi dalam dunia teknologi dan masyarakat.
+        </p>
+    </div>
+</div>
+
+
+
 
     <div class="flex justify-center space-x-4 py-10 bg-white stroke-slate-100">
         <div class="mr-7 col-auto flex flex-col">
