@@ -14,15 +14,6 @@ class KampusController extends Controller
         return view('kehidupan-kampus.index');
     }
 
-    /**
-     * Display the "Ormawa" page.
-     */
-
-    /**
-     * Display the "Fasilitas" page.
-     */
-
-    ///Other
     public function create()
     {
         //
